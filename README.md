@@ -14,7 +14,6 @@ $${\color{cyan}\text{Just}}{\color{darkred}\text{Mc}}{\color{white}\text{ Мод
 <pre><code>/module loadurl https://raw.githubusercontent.com/violetker13/justmcgenerator/main/Генерация песка (1 строка).json</code></pre>
 Ввиде клеток
 <pre><code>/module loadurl https://raw.githubusercontent.com/violetker13/justmcgenerator/main/Генерация на основе воронова(5 строк).json</code></pre>
-<img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/e717b833-efc7-48b8-bd33-ada23f503852" />
 
 Воды
 <pre><code>/module loadurl https://raw.githubusercontent.com/violetker13/justmcgenerator/main/Генерация воды(1 строка)</code></pre>
