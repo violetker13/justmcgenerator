@@ -1,0 +1,2281 @@
+{
+    "handlers":
+    [
+        {
+            "type": "function",
+            "position": 0,
+            "operations":
+            [
+                {
+                    "action": "set_variable_get_all_coordinates",
+                    "values":
+                    [
+                        {
+                            "name": "location",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "pos1",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "x",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "x1",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "y",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "y1",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "z",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "z1",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "yaw",
+                            "value":
+                            {}
+                        },
+                        {
+                            "name": "pitch",
+                            "value":
+                            {}
+                        }
+                    ]
+                },
+                {
+                    "action": "set_variable_get_all_coordinates",
+                    "values":
+                    [
+                        {
+                            "name": "location",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "pos2",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "x",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "x2",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "y",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "y2",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "z",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "z2",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "yaw",
+                            "value":
+                            {}
+                        },
+                        {
+                            "name": "pitch",
+                            "value":
+                            {}
+                        }
+                    ]
+                },
+                {
+                    "action": "set_variable_multiple",
+                    "values":
+                    [
+                        {
+                            "name": "variables",
+                            "value":
+                            {
+                                "type": "array",
+                                "values":
+                                [
+                                    {
+                                        "type": "variable",
+                                        "variable": "minX",
+                                        "scope": "line"
+                                    },
+                                    {
+                                        "type": "variable",
+                                        "variable": "minY",
+                                        "scope": "line"
+                                    },
+                                    {
+                                        "type": "variable",
+                                        "variable": "minZ",
+                                        "scope": "line"
+                                    },
+                                    {
+                                        "type": "variable",
+                                        "variable": "maxX",
+                                        "scope": "line"
+                                    },
+                                    {
+                                        "type": "variable",
+                                        "variable": "maxY",
+                                        "scope": "line"
+                                    },
+                                    {
+                                        "type": "variable",
+                                        "variable": "maxZ",
+                                        "scope": "line"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "values",
+                            "value":
+                            {
+                                "type": "array",
+                                "values":
+                                [
+                                    {
+                                        "type": "number",
+                                        "number": "%math(floor(min(x1,x2)))"
+                                    },
+                                    {
+                                        "type": "number",
+                                        "number": "%math(floor(min(y1,y2)))"
+                                    },
+                                    {
+                                        "type": "number",
+                                        "number": "%math(floor(min(z1,z2)))"
+                                    },
+                                    {
+                                        "type": "number",
+                                        "number": "%math(floor(max(x1,x2)))"
+                                    },
+                                    {
+                                        "type": "number",
+                                        "number": "%math(floor(max(y1,y2)))"
+                                    },
+                                    {
+                                        "type": "number",
+                                        "number": "%math(floor(max(z1,z2)))"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "action": "repeat_on_range",
+                    "values":
+                    [
+                        {
+                            "name": "variable",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "z",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "start",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "minZ",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "end",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "maxZ",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "interval",
+                            "value":
+                            {
+                                "type": "number",
+                                "number": 40.0
+                            }
+                        }
+                    ],
+                    "operations":
+                    [
+                        {
+                            "action": "repeat_on_range",
+                            "values":
+                            [
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "x",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "start",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "minX",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "end",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "maxX",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "interval",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": 40.0
+                                    }
+                                }
+                            ],
+                            "operations":
+                            [
+                                {
+                                    "action": "repeat_on_range",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "y",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "start",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "minY",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "end",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "maxY",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "interval",
+                                            "value":
+                                            {
+                                                "type": "number",
+                                                "number": 50.0
+                                            }
+                                        }
+                                    ],
+                                    "operations":
+                                    [
+                                        {
+                                            "action": "repeat_while",
+                                            "values":
+                                            [
+                                                {
+                                                    "name": "value",
+                                                    "value":
+                                                    {
+                                                        "type": "game_value",
+                                                        "game_value": "cpu_usage",
+                                                        "selection": "null"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "compare",
+                                                    "value":
+                                                    {
+                                                        "type": "number",
+                                                        "number": 35.0
+                                                    }
+                                                }
+                                            ],
+                                            "operations":
+                                            [
+                                                {
+                                                    "action": "control_wait",
+                                                    "values":
+                                                    [
+                                                        {
+                                                            "name": "duration",
+                                                            "value":
+                                                            {
+                                                                "type": "number",
+                                                                "number": 1.0
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "conditional":
+                                            {
+                                                "action": "if_variable_greater_or_equals",
+                                                "is_inverted": false
+                                            }
+                                        },
+                                        {
+                                            "action": "set_variable_set_all_coordinates",
+                                            "values":
+                                            [
+                                                {
+                                                    "name": "variable",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "pos1",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "x",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "x",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "y",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "y",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "z",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "z",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "yaw",
+                                                    "value":
+                                                    {}
+                                                },
+                                                {
+                                                    "name": "pitch",
+                                                    "value":
+                                                    {}
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "action": "set_variable_set_all_coordinates",
+                                            "values":
+                                            [
+                                                {
+                                                    "name": "variable",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "pos2",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "x",
+                                                    "value":
+                                                    {
+                                                        "type": "number",
+                                                        "number": "%math(min(x+39,maxX))"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "y",
+                                                    "value":
+                                                    {
+                                                        "type": "number",
+                                                        "number": "%math(min(y+49,maxY))"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "z",
+                                                    "value":
+                                                    {
+                                                        "type": "number",
+                                                        "number": "%math(min(z+39,maxZ))"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "yaw",
+                                                    "value":
+                                                    {}
+                                                },
+                                                {
+                                                    "name": "pitch",
+                                                    "value":
+                                                    {}
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "action": "set_variable_increment",
+                                            "values":
+                                            [
+                                                {
+                                                    "name": "variable",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Parts",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "number",
+                                                    "value":
+                                                    {
+                                                        "type": "number",
+                                                        "number": 1.0
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "action": "player_send_action_bar",
+                                            "selection":
+                                            {
+                                                "type": "all_players"
+                                            },
+                                            "values":
+                                            [
+                                                {
+                                                    "name": "messages",
+                                                    "value":
+                                                    {
+                                                        "type": "array",
+                                                        "values":
+                                                        [
+                                                            {
+                                                                "type": "text",
+                                                                "text": "&aОчищенно частей:",
+                                                                "parsing": "legacy"
+                                                            },
+                                                            {
+                                                                "type": "variable",
+                                                                "variable": "Parts",
+                                                                "scope": "line"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "action": "game_set_region",
+                                            "values":
+                                            [
+                                                {
+                                                    "name": "block",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "block",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "pos_1",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "pos1",
+                                                        "scope": "line"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "pos_2",
+                                                    "value":
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "pos2",
+                                                        "scope": "line"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "values":
+            [
+                {
+                    "name": "is_hidden",
+                    "value":
+                    {
+                        "type": "enum",
+                        "enum": "TRUE"
+                    }
+                },
+                {
+                    "name": "parameters",
+                    "value":
+                    {
+                        "type": "array",
+                        "values":
+                        [
+                            {
+                                "type": "parameter",
+                                "type_key": "singular",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"Угол региона\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "pos1",
+                                "value_type": "location",
+                                "is_required": "true",
+                                "default_value": "{}",
+                                "slot": 13,
+                                "description_slot": 22
+                            },
+                            {
+                                "type": "parameter",
+                                "type_key": "singular",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"Противоположный угол региона\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "pos2",
+                                "value_type": "location",
+                                "is_required": "true",
+                                "default_value": "{}",
+                                "slot": 15,
+                                "description_slot": 24
+                            },
+                            {
+                                "type": "parameter",
+                                "type_key": "singular",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"Блок\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "block",
+                                "value_type": "block",
+                                "is_required": "true",
+                                "default_value": "{}",
+                                "slot": 11,
+                                "description_slot": 20
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "display_name",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"ES: Установить блоки в регионе\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                },
+                {
+                    "name": "display_description",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"Заполняет регион блоками.\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                },
+                {
+                    "name": "icon",
+                    "value":
+                    {
+                        "type": "item",
+                        "item": "H4sIAAAAAAAA/+NiYGBm4HZJLEkMSy0qzszPY2AQjOBgYMpMYRDKzcxLTS5KTCuxyk/Mji/Pz09hZmBNzi/NK2FgYGBkAACIirsoOwAAAA=="
+                    }
+                }
+            ],
+            "name": "setRegionES"
+        },
+        {
+            "type": "function",
+            "position": 1,
+            "operations":
+            [
+                {
+                    "action": "if_variable_exists",
+                    "values":
+                    [
+                        {
+                            "name": "variable",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "function",
+                                "scope": "local"
+                            }
+                        }
+                    ],
+                    "operations":
+                    [
+                        {
+                            "action": "player_send_message",
+                            "selection":
+                            {
+                                "type": "default_player"
+                            },
+                            "values":
+                            [
+                                {
+                                    "name": "messages",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "text",
+                                                "text": "&aЗагруженная нода:&f ",
+                                                "parsing": "legacy"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "%var_local(NodeFormat)%var_local(n)",
+                                                "parsing": "plain"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "\\n",
+                                                "parsing": "legacy"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "&6Генерирует на основе воронова\\n&eПринимает все значения",
+                                                "parsing": "legacy"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "\\n",
+                                                "parsing": "legacy"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "merging",
+                                    "value":
+                                    {
+                                        "type": "enum",
+                                        "enum": "CONCATENATION"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "action": "else",
+                    "values":
+                    [],
+                    "operations":
+                    [
+                        {
+                            "action": "set_variable_multiple",
+                            "values":
+                            [
+                                {
+                                    "name": "variables",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "variable",
+                                                "variable": "Второй угол региона",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "1 угол региона",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Диапазон сида",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Шаг",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Частота шума",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Коофицент шума",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Блоки",
+                                                "scope": "line"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "values",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "variable",
+                                                "variable": "Второй угол региона",
+                                                "scope": "local"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "1 угол региона",
+                                                "scope": "local"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Диапазон сида",
+                                                "scope": "local"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Шаг",
+                                                "scope": "local"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Частота шума",
+                                                "scope": "local"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Коофицент шума",
+                                                "scope": "local"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Блоки",
+                                                "scope": "local"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "call_function",
+                            "values":
+                            [
+                                {
+                                    "name": "function_name",
+                                    "value":
+                                    {
+                                        "type": "text",
+                                        "text": "setRegionES",
+                                        "parsing": "plain"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "value":
+                                    {
+                                        "type": "map",
+                                        "values":
+                                        {
+                                            "{\"type\":\"text\",\"text\":\"pos1\",\"parsing\":\"plain\"}": {
+                                                "type": "location",
+                                                "x": -70.5000,
+                                                "y": -55.50000,
+                                                "z": 112.5000,
+                                                "yaw": 0.0,
+                                                "pitch": 0.0
+                                            },
+                                            "{\"type\":\"text\",\"text\":\"pos2\",\"parsing\":\"plain\"}": {
+                                                "type": "location",
+                                                "x": 111.5000,
+                                                "y": 300.00000,
+                                                "z": -23.5000,
+                                                "yaw": 0.0,
+                                                "pitch": 0.0
+                                            },
+                                            "{\"type\":\"text\",\"text\":\"block\",\"parsing\":\"plain\"}": {
+                                                "type": "text",
+                                                "text": "air",
+                                                "parsing": "legacy"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "control_wait",
+                            "values":
+                            [
+                                {
+                                    "name": "time_unit",
+                                    "value":
+                                    {
+                                        "type": "enum",
+                                        "enum": "SECONDS"
+                                    }
+                                },
+                                {
+                                    "name": "duration",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": 1.0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_random_number",
+                            "values":
+                            [
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Ключ шума",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "min",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": "%math(Диапазон сида*-1)"
+                                    }
+                                },
+                                {
+                                    "name": "max",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Диапазон сида",
+                                        "scope": "local"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "player_send_message",
+                            "values":
+                            [
+                                {
+                                    "name": "messages",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "text",
+                                                "text": "&b&m                                                                        ",
+                                                "parsing": "legacy"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "&#D877F2Сид:%var_line(Ключ шума)",
+                                                "parsing": "legacy"
+                                            },
+                                            {},
+                                            {},
+                                            {
+                                                "type": "text",
+                                                "text": "&b&m                                                                        ",
+                                                "parsing": "legacy"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "merging",
+                                    "value":
+                                    {
+                                        "type": "enum",
+                                        "enum": "SEPARATE_LINES"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_get_all_coordinates",
+                            "values":
+                            [
+                                {
+                                    "name": "location",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "1 угол региона",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "x",
+                                    "value":
+                                    {}
+                                },
+                                {
+                                    "name": "y",
+                                    "value":
+                                    {}
+                                },
+                                {
+                                    "name": "z",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Z",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "yaw",
+                                    "value":
+                                    {}
+                                },
+                                {
+                                    "name": "pitch",
+                                    "value":
+                                    {}
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_get_all_coordinates",
+                            "values":
+                            [
+                                {
+                                    "name": "location",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Второй угол региона",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "x",
+                                    "value":
+                                    {}
+                                },
+                                {
+                                    "name": "y",
+                                    "value":
+                                    {}
+                                },
+                                {
+                                    "name": "z",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Z1",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "yaw",
+                                    "value":
+                                    {}
+                                },
+                                {
+                                    "name": "pitch",
+                                    "value":
+                                    {}
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_subtract",
+                            "values":
+                            [
+                                {
+                                    "name": "value",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "variable",
+                                                "variable": "Z",
+                                                "scope": "line"
+                                            },
+                                            {
+                                                "type": "variable",
+                                                "variable": "Z1",
+                                                "scope": "line"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "max",
+                                        "scope": "line"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "call_function",
+                            "values":
+                            [
+                                {
+                                    "name": "function_name",
+                                    "value":
+                                    {
+                                        "type": "text",
+                                        "text": "openES",
+                                        "parsing": "plain"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "value":
+                                    {
+                                        "type": "map",
+                                        "values":
+                                        {
+                                            "{\"type\":\"text\",\"text\":\"blocks\",\"parsing\":\"plain\"}": {
+                                                "type": "array",
+                                                "values":
+                                                [
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Блоки",
+                                                        "scope": "line"
+                                                    },
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {}
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "repeat_on_grid",
+                            "values":
+                            [
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Местоположение",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "start",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "1 угол региона",
+                                        "scope": "line"
+                                    }
+                                },
+                                {
+                                    "name": "end",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "Второй угол региона",
+                                        "scope": "line"
+                                    }
+                                }
+                            ],
+                            "operations":
+                            [
+                                {
+                                    "action": "set_variable_get_all_coordinates",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "location",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Местоположение",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "x",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "x",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "y",
+                                            "value":
+                                            {}
+                                        },
+                                        {
+                                            "name": "z",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "z",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "yaw",
+                                            "value":
+                                            {}
+                                        },
+                                        {
+                                            "name": "pitch",
+                                            "value":
+                                            {}
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_multiply",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "value",
+                                            "value":
+                                            {
+                                                "type": "array",
+                                                "values":
+                                                [
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "x",
+                                                        "scope": "line"
+                                                    },
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Шаг",
+                                                        "scope": "line"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "x",
+                                                "scope": "line"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_multiply",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "value",
+                                            "value":
+                                            {
+                                                "type": "array",
+                                                "values":
+                                                [
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "z",
+                                                        "scope": "line"
+                                                    },
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Шаг",
+                                                        "scope": "line"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "z",
+                                                "scope": "line"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_set_all_coordinates",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Местоположение для шума",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "x",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "x",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "y",
+                                            "value":
+                                            {}
+                                        },
+                                        {
+                                            "name": "z",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "z",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "yaw",
+                                            "value":
+                                            {}
+                                        },
+                                        {
+                                            "name": "pitch",
+                                            "value":
+                                            {}
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_voronoi_noise_3d",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Значение шума",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "location",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Местоположение для шума",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "seed",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Ключ шума",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "frequency",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Частота шума",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "displacement",
+                                            "value":
+                                            {}
+                                        },
+                                        {
+                                            "name": "range_mode",
+                                            "value":
+                                            {
+                                                "type": "enum",
+                                                "enum": "FULL_RANGE"
+                                            }
+                                        },
+                                        {
+                                            "name": "enable_distance",
+                                            "value":
+                                            {
+                                                "type": "enum",
+                                                "enum": "FALSE"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_multiply",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "value",
+                                            "value":
+                                            {
+                                                "type": "array",
+                                                "values":
+                                                [
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Значение шума",
+                                                        "scope": "line"
+                                                    },
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Частота шума",
+                                                        "scope": "line"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Значение шума",
+                                                "scope": "line"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_shift_coordinate",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "type",
+                                            "value":
+                                            {
+                                                "type": "enum",
+                                                "enum": "Y"
+                                            }
+                                        },
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Местоположение",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "location",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Местоположение",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "distance",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Значение шума",
+                                                "scope": "line"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_get_list_random_value",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Блок",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "list",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Блоки",
+                                                "scope": "line"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "call_function",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "function_name",
+                                            "value":
+                                            {
+                                                "type": "text",
+                                                "text": "editES",
+                                                "parsing": "plain"
+                                            }
+                                        },
+                                        {
+                                            "name": "args",
+                                            "value":
+                                            {
+                                                "type": "map",
+                                                "values":
+                                                {
+                                                    "{\"type\":\"text\",\"text\":\"loc\",\"parsing\":\"plain\"}": {
+                                                        "type": "variable",
+                                                        "variable": "Местоположение",
+                                                        "scope": "line"
+                                                    },
+                                                    "{\"type\":\"text\",\"text\":\"block\",\"parsing\":\"plain\"}": {
+                                                        "type": "variable",
+                                                        "variable": "Блок",
+                                                        "scope": "line"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "set_variable_get_coordinate",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "type",
+                                            "value":
+                                            {
+                                                "type": "enum",
+                                                "enum": "Z"
+                                            }
+                                        },
+                                        {
+                                            "name": "variable",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "z1",
+                                                "scope": "line"
+                                            }
+                                        },
+                                        {
+                                            "name": "location",
+                                            "value":
+                                            {
+                                                "type": "variable",
+                                                "variable": "Местоположение",
+                                                "scope": "line"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "action": "player_send_action_bar",
+                                    "values":
+                                    [
+                                        {
+                                            "name": "messages",
+                                            "value":
+                                            {
+                                                "type": "array",
+                                                "values":
+                                                [
+                                                    {
+                                                        "type": "text",
+                                                        "text": "&#A6FF6EВыполняется:#",
+                                                        "parsing": "legacy"
+                                                    },
+                                                    {
+                                                        "type": "number",
+                                                        "number": "%math(abs(floor(Z1-z1)))"
+                                                    },
+                                                    {
+                                                        "type": "text",
+                                                        "text": "/",
+                                                        "parsing": "legacy"
+                                                    },
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "max",
+                                                        "scope": "line"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "merging",
+                                            "value":
+                                            {
+                                                "type": "enum",
+                                                "enum": "CONCATENATION"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "action": "call_function",
+                            "values":
+                            [
+                                {
+                                    "name": "function_name",
+                                    "value":
+                                    {
+                                        "type": "text",
+                                        "text": "closeES",
+                                        "parsing": "plain"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "value":
+                                    {
+                                        "type": "map",
+                                        "values":
+                                        {
+                                            "{\"type\":\"text\",\"text\":\"blocks\",\"parsing\":\"plain\"}": {
+                                                "type": "array",
+                                                "values":
+                                                [
+                                                    {
+                                                        "type": "variable",
+                                                        "variable": "Блоки",
+                                                        "scope": "line"
+                                                    },
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {},
+                                                    {}
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "values":
+            [
+                {
+                    "name": "is_hidden",
+                    "value":
+                    {
+                        "type": "enum",
+                        "enum": "TRUE"
+                    }
+                },
+                {
+                    "name": "parameters",
+                    "value":
+                    {
+                        "type": "array",
+                        "values":
+                        []
+                    }
+                },
+                {
+                    "name": "display_description",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{}}"
+                    }
+                }
+            ],
+            "name": "БыстраяГенерация v2.0.нода.1"
+        },
+        {
+            "type": "function",
+            "position": 2,
+            "operations":
+            [
+                {
+                    "action": "repeat_for_each_in_list",
+                    "values":
+                    [
+                        {
+                            "name": "index_variable",
+                            "value":
+                            {}
+                        },
+                        {
+                            "name": "value_variable",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "block",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "list",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "blocks",
+                                "scope": "line"
+                            }
+                        }
+                    ],
+                    "operations":
+                    [
+                        {
+                            "action": "set_variable_create_list",
+                            "values":
+                            [
+                                {
+                                    "name": "values",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        []
+                                    }
+                                },
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "ESA%var_line(block)",
+                                        "scope": "local"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_value",
+                            "values":
+                            [
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "ESAS%var_line(block)",
+                                        "scope": "local"
+                                    }
+                                },
+                                {
+                                    "name": "value",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": 0.0
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "values":
+            [
+                {
+                    "name": "parameters",
+                    "value":
+                    {
+                        "type": "array",
+                        "values":
+                        [
+                            {
+                                "type": "parameter",
+                                "type_key": "plural",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"ID блоков\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "blocks",
+                                "value_type": "text",
+                                "is_required": "false",
+                                "ignore_empty_values": "true",
+                                "default_value": "{\"type\":\"array\",\"values\":[]}",
+                                "slots": "[0,1,10,2,11,3,12,4,13,5,14,15,6,7,16,8,17,18,19,20,21,22,23,24,25,26,9]",
+                                "description_slots": "[32,33,34,35,27,28,29,30,31]"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "display_name",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"ES: Открыть сессию изменения\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                },
+                {
+                    "name": "icon",
+                    "value":
+                    {
+                        "type": "item",
+                        "item": "H4sIAAAAAAAA/+NiYGBm4HZJLEkMSy0qzszPY2AQjOBgYMpMYRDNzcxLTS5KTCuxSs4vKEgtik/Jzy9iZmBNzi/NK2FgYGBkAACUnOaqPgAAAA=="
+                    }
+                },
+                {
+                    "name": "display_description",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"Создаёт сессию изменения блоков.Создаёт списки для местоположений.\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                }
+            ],
+            "name": "openES"
+        },
+        {
+            "type": "function",
+            "position": 3,
+            "operations":
+            [
+                {
+                    "action": "set_variable_append_value",
+                    "values":
+                    [
+                        {
+                            "name": "values",
+                            "value":
+                            {
+                                "type": "array",
+                                "values":
+                                [
+                                    {
+                                        "type": "variable",
+                                        "variable": "loc",
+                                        "scope": "line"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "variable",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "ESA%var_line(block)",
+                                "scope": "local"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "action": "set_variable_increment",
+                    "values":
+                    [
+                        {
+                            "name": "variable",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "ESAS%var_line(block)",
+                                "scope": "local"
+                            }
+                        },
+                        {
+                            "name": "number",
+                            "value":
+                            {}
+                        }
+                    ]
+                },
+                {
+                    "action": "repeat_while",
+                    "values":
+                    [
+                        {
+                            "name": "value",
+                            "value":
+                            {
+                                "type": "game_value",
+                                "game_value": "cpu_usage",
+                                "selection": "null"
+                            }
+                        },
+                        {
+                            "name": "compare",
+                            "value":
+                            {
+                                "type": "number",
+                                "number": 35.0
+                            }
+                        }
+                    ],
+                    "operations":
+                    [
+                        {
+                            "action": "control_wait",
+                            "values":
+                            [
+                                {
+                                    "name": "duration",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": 1.0
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "conditional":
+                    {
+                        "action": "if_variable_greater_or_equals",
+                        "is_inverted": false
+                    }
+                },
+                {
+                    "action": "if_variable_greater_or_equals",
+                    "values":
+                    [
+                        {
+                            "name": "value",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "ESAS%var_line(block)",
+                                "scope": "local"
+                            }
+                        },
+                        {
+                            "name": "compare",
+                            "value":
+                            {
+                                "type": "number",
+                                "number": 20000.0
+                            }
+                        }
+                    ],
+                    "operations":
+                    [
+                        {
+                            "action": "game_set_block",
+                            "values":
+                            [
+                                {
+                                    "name": "locations",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "variable",
+                                                "variable": "ESA%var_line(block)",
+                                                "scope": "local"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "block",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "block",
+                                        "scope": "line"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_create_list",
+                            "values":
+                            [
+                                {
+                                    "name": "values",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        []
+                                    }
+                                },
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "ESA%var_line(block)",
+                                        "scope": "local"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_value",
+                            "values":
+                            [
+                                {
+                                    "name": "variable",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "ESAS%var_line(block)",
+                                        "scope": "local"
+                                    }
+                                },
+                                {
+                                    "name": "value",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": 0.0
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "values":
+            [
+                {
+                    "name": "parameters",
+                    "value":
+                    {
+                        "type": "array",
+                        "values":
+                        [
+                            {
+                                "type": "parameter",
+                                "type_key": "singular",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"Местоположение блока\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "loc",
+                                "value_type": "location",
+                                "is_required": "true",
+                                "default_value": "{}",
+                                "slot": 12,
+                                "description_slot": 21
+                            },
+                            {
+                                "type": "parameter",
+                                "type_key": "singular",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"ID блока\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "block",
+                                "value_type": "text",
+                                "is_required": "true",
+                                "default_value": "{}",
+                                "slot": 14,
+                                "description_slot": 23
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "display_name",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"ES: Установить блок\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                },
+                {
+                    "name": "icon",
+                    "value":
+                    {
+                        "type": "item",
+                        "item": "H4sIAAAAAAAA/+NiYGBm4HZJLEkMSy0qzszPY2AQjOBgYMpMYZDLzcxLTS5KTCuxSq0oyC9OTYlPzi8oSC2KTy9KLEllZmBNzi/NK2FgYGBkAADuMhScRwAAAA=="
+                    }
+                },
+                {
+                    "name": "display_description",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"Добавляет блок в сессию изменения блоков.\\nМестоположение блока добавляется в список;\\nпри достижении необходимого размера блоки из\\nсписка устанавливаются в мир.\\nВызывает внутри себя функцию \\u0026bwait\\u0026r. \\n\\n\\u0026c» \\u0026fТребует открытой сессии.\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                }
+            ],
+            "name": "editES"
+        },
+        {
+            "type": "function",
+            "position": 4,
+            "operations":
+            [
+                {
+                    "action": "repeat_for_each_in_list",
+                    "values":
+                    [
+                        {
+                            "name": "index_variable",
+                            "value":
+                            {}
+                        },
+                        {
+                            "name": "value_variable",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "block",
+                                "scope": "line"
+                            }
+                        },
+                        {
+                            "name": "list",
+                            "value":
+                            {
+                                "type": "variable",
+                                "variable": "blocks",
+                                "scope": "line"
+                            }
+                        }
+                    ],
+                    "operations":
+                    [
+                        {
+                            "action": "control_wait",
+                            "values":
+                            [
+                                {
+                                    "name": "duration",
+                                    "value":
+                                    {
+                                        "type": "number",
+                                        "number": "%math(%val(cpu_usage)/35)"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "game_set_block",
+                            "values":
+                            [
+                                {
+                                    "name": "locations",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "variable",
+                                                "variable": "ESA%var_line(block)",
+                                                "scope": "local"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "block",
+                                    "value":
+                                    {
+                                        "type": "variable",
+                                        "variable": "block",
+                                        "scope": "line"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "action": "set_variable_purge",
+                            "values":
+                            [
+                                {
+                                    "name": "names",
+                                    "value":
+                                    {
+                                        "type": "array",
+                                        "values":
+                                        [
+                                            {
+                                                "type": "text",
+                                                "text": "ESA%var_line(block)",
+                                                "parsing": "plain"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "ESAS%var_line(block)",
+                                                "parsing": "plain"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "scope",
+                                    "value":
+                                    {
+                                        "type": "enum",
+                                        "enum": "LOCAL"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "values":
+            [
+                {
+                    "name": "parameters",
+                    "value":
+                    {
+                        "type": "array",
+                        "values":
+                        [
+                            {
+                                "type": "parameter",
+                                "type_key": "plural",
+                                "description": "{\"translations\":{},\"fallback\":{\"rawText\":\"ID блоков\",\"parsingType\":\"LEGACY\"}}",
+                                "name": "blocks",
+                                "value_type": "text",
+                                "is_required": "false",
+                                "ignore_empty_values": "true",
+                                "default_value": "{\"type\":\"array\",\"values\":[]}",
+                                "slots": "[0,9,18,10,19,1,2,11,20,3,4,13,12,21,14,5,22,23,24,15,7,25,26,17,8,16,6]",
+                                "description_slots": "[32,33,34,35,27,28,29,30,31]"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "display_name",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"ES: Закрыть сессию изменения\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                },
+                {
+                    "name": "icon",
+                    "value":
+                    {
+                        "type": "item",
+                        "item": "H4sIAAAAAAAA/+NiYGBm4HZJLEkMSy0qzszPY2AQjOBgYMpMYZDLzcxLTS5KTCuxyq/ITMmsSk2JT84vKEgtik/Jzy9iZmBNzi/NK2FgYGBkAAChhlQuRwAAAA=="
+                    }
+                },
+                {
+                    "name": "display_description",
+                    "value":
+                    {
+                        "type": "localized_text",
+                        "data": "{\"translations\":{},\"fallback\":{\"rawText\":\"Завершает сессию изменения блоков.\\nУстанавливает оставшиеся блоки, очищает списки.\\n\\n\\u0026c» \\u0026fТребует открытой сессии.\",\"parsingType\":\"LEGACY\"}}"
+                    }
+                }
+            ],
+            "name": "closeES"
+        }
+    ]
+}
