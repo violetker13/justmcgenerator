@@ -1,4 +1,3 @@
-<img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/38a9d2c9-d0f6-4158-b73b-9848a45f9709" /><h1 align="left">
 $${\color{cyan}\text{Just}}{\color{darkred}\text{Mc}}{\color{white}\text{ Модульный генератор - MS}}$$
 </h1>
 
