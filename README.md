@@ -1,5 +1,7 @@
-$${\color{cyan}\text{Just}}{\color{darkred}\text{Mc}}{\color{white}\text{ Модульный генератор - MS}}$$
+$${\color{cyan}\text{Just}}{\color{darkred}\text{Mc}}{\color{white}\text{ Модульный генератор - JMEG}}$$
 </h1>
+Основной модуль:
+<pre><code>/module load kaleb_b/JMEG</code></pre>
 
 <h2 align="left">Список доп. модулей:</h2>
 
