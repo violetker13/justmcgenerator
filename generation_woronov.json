@@ -637,7 +637,7 @@
         },
         {
             "type": "function",
-            "position": 1,
+            "position": 0,
             "operations":
             [
                 {
@@ -1711,7 +1711,7 @@
         },
         {
             "type": "function",
-            "position": 2,
+            "position": 0,
             "operations":
             [
                 {
@@ -1847,7 +1847,7 @@
         },
         {
             "type": "function",
-            "position": 3,
+            "position": 0,
             "operations":
             [
                 {
@@ -2112,7 +2112,7 @@
         },
         {
             "type": "function",
-            "position": 4,
+            "position": 0,
             "operations":
             [
                 {
